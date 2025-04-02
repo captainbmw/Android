@@ -21,10 +21,13 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
+import androidx.navigation.NavHostController
+import androidx.navigation.compose.rememberNavController
 import com.bmw.driller.R
 
 @Composable
-fun HomeScreen(modifier: Modifier = Modifier) {
+fun HomeScreen(navController: NavHostController) {
     Column(modifier = Modifier
         .fillMaxSize()
         .background(Color.White),
@@ -60,14 +63,11 @@ fun HomeScreen(modifier: Modifier = Modifier) {
 
             )
         }
-        Spacer(modifier = Modifier.height(400.dp))
+        Spacer(modifier = Modifier.height(40.dp))
         Button(onClick = {/*TODO*/},
-            modifier = Modifier.width(40.dp)) {
-            Text("Register",
-
-                fontSize = 20.sp,
-
-            )
+            modifier = Modifier.width(400.dp)) {
+            Text("Register"
+                )
         }
 
         }
@@ -76,5 +76,5 @@ fun HomeScreen(modifier: Modifier = Modifier) {
 @Preview
 @Composable
 private fun Screenpage() {
-    HomeScreen()
+    HomeScreen(rememberNavController())
 }
