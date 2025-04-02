@@ -75,6 +75,6 @@ fun HomeScreen(modifier: Modifier = Modifier) {
 
 @Preview
 @Composable
-private fun screen() {
+private fun Screenpage() {
     HomeScreen()
 }
